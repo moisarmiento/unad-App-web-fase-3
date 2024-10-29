@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="Actualizar.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado con botones -->
+        <div class="header">
+            <button class="top-button" onclick="cargar_principal()">principal</button>
+            <button class="top-button" onclick="cargar_leer()">Leer</button>
+            <button class="top-button" onclick="cargar_borrar()">Borrar</button>
+            <button class="top-button" onclick="cargar_crear()">Crear</button>
+        </div>
+        
+        <!-- Tabla de productos -->
+        <div class="table-container">
+            <table border="1" width="100%" cellspacing="0" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Categoría</th>
+                        <th>Disponibilidad</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <!-- Aquí se llenarán los productos mediante JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Botón de actualizar -->
+        <div class="buttons">
+            <button class="action-button" onclick="loadProducts()">Actualizar</button>
+        </div>
+
+        <!-- Mensaje de carga -->
+        <div id="message"></div>
+    </div>
+
+    <script src="Funcion_Actualizar.js"></script>
+</body>
+</html>
