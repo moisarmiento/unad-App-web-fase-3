@@ -3,7 +3,7 @@
 $servername = "localhost"; // Cambia esto si tu servidor es diferente
 $username = "root"; // Cambia esto si tu usuario es diferente
 $password = ""; // Cambia esto si tu contraseña es diferente
-$dbname = "productos_phase2"; // nombre de la base de datos 
+$dbname = "unad_app_web_fase3"; // nombre de la base de datos 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

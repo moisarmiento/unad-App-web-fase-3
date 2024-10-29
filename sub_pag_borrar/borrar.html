@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="borrar.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="top-button" onclick="cargar_principal()">Principal</button>
+            <button class="top-button" onclick="cargar_leer()">Leer</button>
+            <button class="top-button" onclick="cargar_crear()">Crear</button>
+            <button class="top-button" onclick="cargar_actualizar()">Actualizar</button>
+        </div>
+
+        <div class="form-container">
+            <table border="1" width="100%" cellspacing="0" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Categoría</th>
+                        <th>Disponibilidad</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                        <th>Borrar</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-productos">
+                    <!-- Aquí se cargarán los productos mediante JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+    <script src="borrar.js"></script>
+</body>
+</html>

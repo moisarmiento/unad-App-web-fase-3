@@ -1,0 +1,55 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+/* Título centrado */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra todo dentro del formulario */
+}
+
+/* Estilo de las etiquetas y campos de entrada */
+label {
+    display: block; /* Hace que las etiquetas ocupen toda la línea */
+    margin: 10px 0 5px; /* Espacio entre la etiqueta y el campo */
+}
+
+input {
+    width: 90%; /* Ocupa el 100% del ancho del formulario */
+    padding: 10px;
+    margin-bottom: 15px; /* Espacio debajo de cada campo */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Cambia el color al pasar el ratón */
+}

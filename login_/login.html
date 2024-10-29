@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="login.css"> <!-- Ajusta el CSS según tus necesidades -->
+</head>
+<body>
+    
+    <form action="verificar_login.php" method="POST">
+        <h1>Iniciar Sesión</h1>
+        <label for="nombre">Nombre de usuario:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" required>
+        <br>
+
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+</body>
+</html>

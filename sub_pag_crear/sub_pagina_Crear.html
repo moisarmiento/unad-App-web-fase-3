@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Producto</title>
+    <link rel="stylesheet" href="Crear.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado con botones -->
+        <div class="header">
+            <button class="top-button" onclick="cargar_principal()">principal</button>
+            <button class="top-button" onclick="cargar_leer()">Leer</button>
+            <button class="top-button" onclick="cargar_actualizar()">Actualizar</button>
+            <button class="top-button" onclick="cargar_borrar()">Borrar</button>
+            
+        <!--    <input type="text" id="searchBar" placeholder="Buscar por codigo" class="search-bar">  -->
+        </div>
+
+        <div class="form-container">
+           <!-- Formulario para ingresar los datos de un producto, que incluye campos como código, nombre, descripción, categoría, disponibilidad, precio e imagen. -->
+            <form id="productForm" enctype="multipart/form-data" action="Ingreso_de_datos.php" method="post">
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" class="input-field">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="input-field">
+
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" name="descripcion" class="input-field">
+
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" class="input-field">
+                    <option value="construcción">construcción</option>
+                    <option value="ornamentación ">ornamentación</option>
+                    <option value="pintura">pintura</option>
+                </select>
+
+                <label for="disponible">Disponible:</label>
+                <select id="disponible" name="disponible" class="input-field">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="precio">Precio:</label>
+                <input type="text" id="precio" name="precio" class="input-field">
+
+                <label for="imagen">Subir Imagen:</label>
+                <input type="file" id="imagen" name="imagen" class="input-field">
+
+                <div class="buttons">
+                    <button type="submit" class="action-button accept-button" >Aceptar</button>
+                </div>
+
+                <div id="message" class="message"></div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="Funciones_crear.js"></script>
+</body>
+</html>
