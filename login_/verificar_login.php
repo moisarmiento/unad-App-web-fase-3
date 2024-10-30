@@ -1,23 +1,22 @@
 <?php
-$servername = "localhost"; // Cambia esto si tu servidor es diferente
-$username = "root"; // Cambia esto si tu usuario es diferente
-$password = ""; // Cambia esto si tu contraseña es diferente
-$dbname = "unad_app_web_fase3"; // nombre de la base de datos 
+session_start(); // Iniciar la sesión al principio del archivo
 
-// Crear conexión
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "unad_app_web_fase3";
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar conexión
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Recuperar datos del formulario
 $nombre = $_POST['nombre'];
 $contraseña = $_POST['contraseña'];
 
-// Verificar si el nombre de usuario existe
-$sql = "SELECT Contraseña FROM usuarios WHERE Nombre = ?";
+// Consulta para obtener la contraseña y el número de compras
+$sql = "SELECT Contraseña, Num_compras FROM usuarios WHERE Nombre = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $nombre);
 $stmt->execute();
@@ -27,30 +26,27 @@ if ($result->num_rows === 0) {
     die("Usuario no encontrado.");
 }
 
-// Recuperar la contraseña de la base de datos
 $row = $result->fetch_assoc();
 $contraseña_db = $row['Contraseña'];
+$num_compras = $row['Num_compras'];
 
-// Verificar la contraseña
 if ($contraseña === $contraseña_db) {
-    // Si el usuario es "control_maestro" y la contraseña es "987654321"
+    // Guardar el nombre de usuario y el número de compras en la sesión
+    $_SESSION['usuario'] = $nombre;
+    $_SESSION['num_compras'] = $num_compras;
+    
+    // Redirigir a diferentes páginas según el usuario
     if ($nombre === "control_maestro" && $contraseña === "987654321") {
         header("Location: ../sub_pag_actualizar/sub_pagina_Actualizar.html");
-        echo "Bienvenido Control Maestro";
-        // O redirigir a una página específica para el Control Maestro
-        // header("Location: ../ControlMaestro/ControlMaestro.html");
-        exit(); // Asegúrate de usar exit después de header
+        exit();
     }
 
-    // Contraseña correcta para otros usuarios, redirigir a la página principal
     header("Location: ../catalogo/catalogo.php"); 
-    exit(); // Asegúrate de usar exit después de header
+    exit();
 } else {
     die("Contraseña incorrecta.");
 }
 
-// Cerrar sentencias y conexión
 $stmt->close();
 $conn->close();
 ?>
-
