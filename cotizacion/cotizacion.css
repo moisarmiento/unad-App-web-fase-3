@@ -3,7 +3,6 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 .header {
@@ -11,7 +10,11 @@ body {
     color: white;
     padding: 20px;
 }
-
+.header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
 .productos-container {
     display: flex;
     flex-direction: column;

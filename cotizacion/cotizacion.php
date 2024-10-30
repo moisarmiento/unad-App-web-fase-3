@@ -38,6 +38,7 @@ $conn->close();
 <body>
 
 <div class="header">
+    <button class="button" onclick="cargar_principal()">salir</button>
     <h1>Cotización de Productos</h1>
 </div>
 
@@ -72,6 +73,10 @@ document.getElementById('cotizacion-form').addEventListener('input', function() 
 
     document.getElementById('total').textContent = total.toFixed(2);
 });
+function cargar_principal() {
+    window.location.href = '../Principal/Principal.html';
+}
+
 </script>
 
 </body>
