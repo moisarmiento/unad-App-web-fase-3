@@ -55,7 +55,7 @@ $conn->close();
 
     <div class="total-container">
         <p>Total: $<span id="total">0</span></p>
-        <button type="submit">Generar Cotización</button>
+        <button type="submit">limpiar Cotización</button>
     </div>
 </form>
 

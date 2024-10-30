@@ -35,6 +35,7 @@ $contraseña_db = $row['Contraseña'];
 if ($contraseña === $contraseña_db) {
     // Si el usuario es "control_maestro" y la contraseña es "987654321"
     if ($nombre === "control_maestro" && $contraseña === "987654321") {
+        header("Location: ../sub_pag_actualizar/sub_pagina_Actualizar.html");
         echo "Bienvenido Control Maestro";
         // O redirigir a una página específica para el Control Maestro
         // header("Location: ../ControlMaestro/ControlMaestro.html");
@@ -42,7 +43,7 @@ if ($contraseña === $contraseña_db) {
     }
 
     // Contraseña correcta para otros usuarios, redirigir a la página principal
-    header("Location: ../Principal/Principal.html");
+    header("Location: ../catalogo/catalogo.php"); 
     exit(); // Asegúrate de usar exit después de header
 } else {
     die("Contraseña incorrecta.");

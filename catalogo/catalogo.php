@@ -61,9 +61,9 @@ $conn->close();
 <body>
 
 <div class="header">
-    <button class="button">salir</button>
+    <button class="button" onclick="cargar_principal()">salir</button>
     <h1>Productos</h1>
-    <button class="button">Cotizar</button>
+    <button class="button" onclick="cargar_cotizar()">Cotizar</button>
 </div>
 
 <!-- Modal -->
@@ -140,6 +140,13 @@ function comprarProducto() {
 
     closeModal();
 }
+function cargar_principal() {
+    window.location.href = '../Principal/Principal.html';
+}
+function cargar_cotizar() {
+    window.location.href = '../cotizacion/cotizacion.php';
+}
+
 </script>
 
 </body>
