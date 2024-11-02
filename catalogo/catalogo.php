@@ -142,8 +142,6 @@ $conn->close();
 </div>
 
 <script>
-
-//function cargar_cotizar(){<?php //session_destroy(); ?>  window.location.href = '../cotizacion/cotizacion.php'; }
     // Obtener el número de compras de la sesión PHP y pasarlo a JavaScript
     const numCompras = <?php echo json_encode($num_compras); ?>; // Esto asegurará que el valor se maneje correctamente en JavaScript
    // console.log("Número de compras:", numCompras); // Verificar 
@@ -216,10 +214,17 @@ function comprarProducto() {
     closeModal();
 }
 
-// Función para cargar la página principal y destruir la sesión
+// Funciónes para cargar las páginas y destruir la sesión
 function cargar_principal() {
-    <?php session_destroy(); ?>
+    DESTRUYE();
     window.location.href = '../Principal/Principal.html';
+}
+function cargar_cotizar(){
+    DESTRUYE();
+      window.location.href = '../cotizacion/cotizacion.php';
+}
+function DESTRUYE(){
+    <?php session_destroy(); ?>
 }
 
 </script>
