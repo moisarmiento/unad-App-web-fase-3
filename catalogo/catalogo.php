@@ -141,7 +141,7 @@ $conn->close();
     ?>
 </div>
 <div class="footer">
-    <p><strong>Ubicados en:</strong>Bogota</p>
+    <p><strong>Envío gratis a Bogotá</strong></p>
     <p><strong>Promociónes de:</strong> 2%,5%,10% de descuento</p>
     <p><strong>Dirección:</strong> calle:123#45-67</p>
     <p><strong>Teléfono:</strong> 6011234567</p>
