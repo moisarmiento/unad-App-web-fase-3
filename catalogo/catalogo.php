@@ -140,6 +140,13 @@ $conn->close();
     }
     ?>
 </div>
+<div class="footer">
+    <p><strong>Ubicados en:</strong>Bogota</p>
+    <p><strong>Promociónes de:</strong> 2%,5%,10% de descuento</p>
+    <p><strong>Dirección:</strong> calle:123#45-67</p>
+    <p><strong>Teléfono:</strong> 6011234567</p>
+    <p><strong>Correo:</strong> generico@gmail.com</p>
+</div>
 
 <script>
     // Obtener el número de compras de la sesión PHP y pasarlo a JavaScript
