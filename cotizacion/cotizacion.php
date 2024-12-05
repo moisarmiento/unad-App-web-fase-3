@@ -71,7 +71,7 @@ document.getElementById('cotizacion-form').addEventListener('input', function() 
         total += precio * cantidad;
     });
 
-    document.getElementById('total').textContent = total.toFixed(2);
+    document.getElementById('total').textContent = (total % 1 === 0) ? total : total.toFixed(2);
 });
 function cargar_principal() {
     window.location.href = '../Principal/Principal.html';
